@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +23,6 @@
 
 </head>
 <body>
-  <!-- <img class="portrait" src="./resources/images/newprofpic.jpg" alt="Vinayak Singh Bhadoriya" style="float:right"> -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +35,7 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Articles</a>
+            <a class="nav-link" href="./articles/index.html">Articles</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Projects</a>
@@ -111,4 +110,142 @@
         the Neural Network architecture proposed by Bowman et al.(2015) SNLI paper.<a href="https://github.com/wukachn/uom-nlu">(link)</a>
       </p>
 
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Icons -->
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="assets/icons/apple-touch-icon.png"
+  />
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="assets/icons/favicon-32x32.png"
+  />
+
+  <!-- Animate CSS CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <title>Vinayak Singh Bhadoriya</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1 class="navbar-title">Vinayak Singh Bhadoriya</h1>
+    <ul class="navbar-list">
+      <li class="navbar-item">
+        <a href="#about" class="navbar-link">About</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#articles" class="navbar-link">Articles</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#projects" class="navbar-link">Projects</a>
+      </li>
+    </ul>
+    <button class="burger-menu" id="burger-menu">
+      <ion-icon class="bars" name="menu-outline"></ion-icon>
+    </button>
+  </nav>
+
+  <section class="hero" id="about">
+    <img
+      src="assets/images/newprofpic.jpg"
+      alt="jane-doe"
+      loading="lazy"
+      class="hero-img"
+    />
+    <div class="bio">
+      <h2 class="bio-title">About Me</h2>
+      <p class="bio-text">
+        Hello, this is Vinayak 👋!
+        I am an MSc Computer Science student at New York University, Courant Institute of Mathematical Sciences, and earlier completed my BSc in Computer Science from the University of Manchester.
+        I have a keen interest in Machine Learning and Artificial Intelligence, and have worked on projects ranging from topics like RNA folding and Natural Language Inference to Neural Network Optimization.
+        I have previously interned at Discover and EY, and have experience working with languages like Java, Python, and technologies like Git, K8s, and Jenkins. Additionally, I have a huge interest in competitive programming and have participated in various online contests and hackathons.
+      </p>
+    </div>
+  </section>
+
+  <section class="more-about">
+    <h2>More About Me</h2>
+    <h2>Education</h2>
+    <h4>New York University, Courant Institute of Mathematical Sciences(2024 - 2026)</h4>
+      <p>MS in Computer Science</p>
+
+    <h4>University of Manchester (2021 - 2024)</h4>
+      <p>BSc (Hons) Computer Science</p>
+
+    <h4>Delhi Public School Noida (2014 - 2021)</h4>
+      <p>CBSE, Science Stream</p>
+
+  &nbsp;
+
+  <h2>Skills</h2>
+    <h4>Programming Languages</h4>
+      <p>Python, Java, C, C++, JavaScript, HTML, CSS</p>
+    <h4>Tools</h4>
+      <p>Git, Numpy, TensorFlow, PyTorch, Kubernetes, Docker, Jenkins, Jira</p>
+
+  &nbsp;
+
+  <h2>Experience</h2>
+    <h4>Business Technology Intern at <a href="https://www.discover.com/">Discover</a> (June 2023 - August 2023)</h4>
+      <p>Part of the Business Technology team, specifically working on the Diners Club Internation portal. Responsible for creating
+       an automated healthcheck for the portal using Java and Playwright, saving the team hours of manual testing every day.
+      </p>
+
+    <h4>Academic Notetaker at <a href="https://www.randstad.co.uk/">Randstad Student Support</a> (September 2022 - December 2023)</h4>
+      <p>Provided notetaking support to students with disabilities and attended various
+        lectures and seminars taking accurate notes for students who found it hard to take notes themselves.
+      </p>
+
+    <h4>Summer Intern at <a href="https://www.ey.com/en_in">EY</a> (August 2022 - September 2022)</h4>
+      <p>Shadowed a Tax Associate and learnt more about EY’s DigiTDS product which automates the ‘Tax Deducted at Source’ 
+        and ‘Tax Collected at Source’ processes.
+      </p>
+
+  &nbsp;
+
+  <h2>Projects</h2>
+      <h4>DynamicRNA</h4>
+      <p>As part of my undergraduate thesis I built a machine learning model which predicts the folded secondary structure given an RNA sequence,
+        using a combination of traditional machine learning techniques and a dynamic programming algorithm
+        developed by Zuker and Stiegler. The report is available <a href="./resources/files/report.pdf">here</a>
+      </p>
+
+      <h4>Natural Language Inference(NLI) using traditional ML and Deep Learning methods</h4>
+      <p>Implemented a Natural Language Inference model using traditional machine learning techniques like
+        Logistic Regression, Random Forest and Gradient Boosting, as well as deep learning techniques like
+        the Neural Network architecture proposed by Bowman et al.(2015) SNLI paper.<a href="https://github.com/wukachn/uom-nlu">(link)</a>
+      </p>
+  </section>
+  
+  <script src="assets/js/script.js"></script>
+
+  <script
+    type = "module"
+    source = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+
+  <script
+    nomodule
+    source = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+</body>
 </html>
