@@ -100,8 +100,8 @@ export default function Home() {
             <h3 className="text-xl font-bold">Natural Language Inference</h3>
             <p className="text-lg">
               Natural Language Inference(NLI) using traditional ML and Deep
-              Learning methods Implemented a Natural Language Inference model
-              using traditional machine learning techniques like Logistic
+              Learning methods where I implemented a Natural Language Inference
+              model using traditional machine learning techniques like Logistic
               Regression, Random Forest and Gradient Boosting, as well as deep
               learning techniques like the Neural Network architecture proposed
               by Bowman et al.(2015) SNLI paper.
