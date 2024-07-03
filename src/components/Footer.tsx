@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
                 href="https://github.com/vinayuuuck"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-300"
+                className="hover:text-pink-300"
               >
                 GitHub
               </a>
@@ -23,13 +23,13 @@ const Footer: React.FC = () => {
                 href="https://linkedin.com/in/vinayaksbhadoriya"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-300"
+                className="hover:text-pink-300"
               >
                 LinkedIn
               </a>
               <a
                 href="mailto:vinayaksbhadoriya@gmail.com"
-                className="hover:text-gray-300"
+                className="hover:text-pink-300"
               >
                 Email
               </a>
