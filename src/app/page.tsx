@@ -5,9 +5,9 @@ export default function Home() {
       <section className="text-center">
         <h1 className="text-2xl font-bold mb-4">Hello, World! 👋</h1>
         <p className="text-lg max-w-2xl mx-auto">
-          Hi, I'm Vinayak Singh Bhadoriya, a Computer Science graduate from The
-          University of Manchester currently getting my Masters at NYU Courant.
-          I have a keen interest in Machine Learning and Artificial
+          Hi, I&apos;m Vinayak Singh Bhadoriya, a Computer Science graduate from
+          The University of Manchester currently getting my Masters at NYU
+          Courant. I have a keen interest in Machine Learning and Artificial
           Intelligence, and have worked on projects ranging from topics like RNA
           folding and Natural Language Inference to Neural Network Optimization.
         </p>
@@ -17,8 +17,8 @@ export default function Home() {
           <a href="./articles" className="text-pink-500 hover:underline">
             Articles
           </a>{" "}
-          page if you're interested in my thoughts on Life, The Universe, and
-          Everything.{" "}
+          page if you&apos;re interested in my thoughts on Life, The Universe,
+          and Everything.{" "}
         </p>
       </section>
 
