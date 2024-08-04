@@ -1,51 +1,51 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { unified } from 'unified';
+import parse from 'remark-parse';
+import remark2rehype from 'remark-rehype';
+import stringify from 'rehype-stringify';
+import remarkMath from 'remark-math';
+import rehypeMathjax from 'rehype-mathjax';
+import { ArticleData } from './types';
 
 const articlesDirectory = path.join(process.cwd(), 'public/articles');
 
-export function getSortedArticlesData() {
-  // Get file names under /articles
+export function getSortedArticlesData(): Omit<ArticleData, 'contentHtml'>[] {
   const fileNames = fs.readdirSync(articlesDirectory);
   const allArticlesData = fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '');
-
-    // Read markdown file as string
     const fullPath = path.join(articlesDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-    // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
 
-    // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string }),
+      ...(matterResult.data as { date: string; description: string; title: string }),
     };
   });
 
-  // Sort posts by date
-  return allArticlesData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+  return allArticlesData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export function getArticleData(id: string) {
+export async function getArticleData(id: string): Promise<ArticleData> {
   const fullPath = path.join(articlesDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-  // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
 
-  // Combine the data with the id and contentHtml
+  const processedContent = await unified()
+    .use(parse)
+    .use(remarkMath)
+    .use(remark2rehype)
+    .use(rehypeMathjax)
+    .use(stringify)
+    .process(matterResult.content);
+
+  const contentHtml = processedContent.toString();
+
   return {
     id,
-    content: matterResult.content,
-    ...(matterResult.data as { date: string; title: string }),
+    contentHtml,
+    ...(matterResult.data as { date: string; description: string; title: string }),
   };
 }

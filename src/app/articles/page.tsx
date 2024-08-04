@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <div className="mx-auto space-y-4 font-sans">
       <h1 className="text-3xl font-bold mb-6">Latest Articles</h1>
-      {latestFourPosts.map(({ id, date, title }) => (
+      {latestFourPosts.map(({ id, date, description, title }) => (
         <div key={id} className="border-b pb-4">
           <Link
             href={`/articles/${id}`}
@@ -16,6 +16,7 @@ export default function Page() {
           >
             {title}
           </Link>
+          <p className="text-black-500 text-sm">{description}</p>
           <p className="text-black-500 text-sm">{date}</p>
         </div>
       ))}
