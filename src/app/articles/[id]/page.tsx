@@ -21,5 +21,9 @@ export async function generateStaticParams() {
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const articleData: ArticleData = await getArticleData(params.id);
 
-  return <ArticleContent articleData={articleData} />;
+  return (
+    <div className="article-content mx-auto prose">
+      <ArticleContent articleData={articleData} />
+    </div>
+  );
 }
