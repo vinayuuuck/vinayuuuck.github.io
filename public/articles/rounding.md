@@ -27,8 +27,8 @@ the problem of stagnation.
 
 So, what even is rounding? It is the transformation of a number from its actual value to
 a value/number with fewer digits, in order to make it easier to work with.
-Suffice to say, if the number is already sufficiently represented in same or fewer digits than possible,
-rounding does not change the value of the number.
+Suffice to say, if the number is already sufficiently represented in same or fewer digits than required,
+then rounding does not change the value of the number.
 
 How does this relate to floating point arithmetic? In floating point arithmetic, numbers are represented in a binary format
 with a fixed number of bits for the mantissa and the exponent. This means that not all real numbers can be represented exactly
